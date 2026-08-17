@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<article class="article-shell">
+  <header class="article-header">
+    <p class="eyebrow">{{ page.category | default: "Fieldnote" }}</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p class="dek">{{ page.description }}</p>{% endif %}
+    <div class="article-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+      <span>{{ page.reading_time | default: "6 min read" }}</span>
+    </div>
+  </header>
+  <div class="article-body">{{ content }}</div>
+  <aside class="article-note">
+    <strong>Reading standard</strong>
+    <p>Check the population, comparator, endpoint, duration, estimand, uncertainty, and source before carrying a conclusion into another context.</p>
+  </aside>
+  <a class="back-link" href="{{ '/' | relative_url }}">← Return to the journal</a>
+</article>
+

@@ -1,0 +1,49 @@
+---
+layout: default
+title:
+description: Evidence-oriented fieldnotes on incretin signaling, metabolic peptides, trial endpoints, and responsible research interpretation.
+---
+<section class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Independent research journal</p>
+    <h1>Metabolic evidence, read in context.</h1>
+    <p class="hero-copy">Fieldnotes for readers who want to understand incretin biology, metabolic peptide research, and clinical outcomes without flattening every study into a headline.</p>
+    <div class="signal-row" aria-label="Topics">
+      <span>GLP-1 &amp; GIP</span>
+      <span>Trial design</span>
+      <span>Metabolic signaling</span>
+      <span>Evidence interpretation</span>
+    </div>
+  </div>
+</section>
+
+<section class="journal-grid" aria-labelledby="journal-heading">
+  <div class="section-heading">
+    <h2 id="journal-heading">Latest fieldnotes</h2>
+    <p>{{ site.posts | size }} essays in the archive</p>
+  </div>
+  <div class="post-list">
+    {% for post in site.posts %}
+      <a class="post-card" href="{{ post.url | relative_url }}">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+        <div>
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.description }}</p>
+        </div>
+        <span class="post-arrow" aria-hidden="true">↗</span>
+      </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="principles" aria-labelledby="principles-heading">
+  <div class="section-heading">
+    <h2 id="principles-heading">A practical reading standard</h2>
+  </div>
+  <div class="principle-grid">
+    <div class="principle"><span>01</span><h3>Start with the question</h3><p>A mechanism experiment, efficacy trial, and safety study answer different questions.</p></div>
+    <div class="principle"><span>02</span><h3>Keep the denominator</h3><p>Population, comparator, duration, and missing data determine what a percentage means.</p></div>
+    <div class="principle"><span>03</span><h3>Separate signal from decision</h3><p>Interesting evidence can justify more research without supporting an individual treatment choice.</p></div>
+  </div>
+</section>
+

@@ -1,0 +1,14 @@
+title: Metabolic Evidence Fieldnotes
+description: Independent notes on incretin biology, metabolic peptide research, trial design, and evidence interpretation.
+url: https://lcwcc.github.io
+baseurl: /test_web_page
+lang: en
+timezone: Asia/Shanghai
+permalink: /journal/:title/
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+exclude:
+  - README.md
+
